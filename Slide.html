@@ -1,0 +1,1943 @@
+<style type="text/css">
+/*
+	Coin Slider jQuery plugin CSS styles
+	http://workshop.rs/projects/coin-slider
+*/
+
+
+.coin-slider {
+	margin-left:auto;
+	margin-right:auto; 
+	overflow: hidden; 
+	zoom: 1; 
+	position: relative; 
+}
+
+.coin-slider a{ text-decoration: none; outline: none; border: none; }
+
+.cs-buttons { 
+	font-size: 0px; 
+	padding: 10px; 
+	float: right; 
+}
+.cs-buttons a { 
+	margin-left: 5px;
+	margin-right: 5px;
+	height: 8px; 
+	width: 8px; 
+	float: left; 
+	border: 1px solid #B8C4CF; 
+	border-radius: 50%;
+	color: #B8C4CF; 
+	text-indent: -1000px; 
+	position: relative;
+	z-index:1200;
+}
+.cs-active { background-color: #B8C4CF; color: #FFFFFF; }
+
+.cs-title { 
+	position:absolute;
+	width: 300px;
+	height:280px;
+	padding: 10px; 
+	background-color: #000000; 
+	color: #FFFFFF;
+}
+
+.cs-prev { 
+	background-color: #000000; 
+	color: #FFFFFF; 
+	padding: 0px 10px; 
+}
+.cs-next { 
+	background-color: #000000; 
+	color: #FFFFFF; 
+	padding: 0px 10px;
+	margin-right: 50px; 
+}
+
+/*
+#cs-prev-coin-slider {
+	position: relative; 
+	top: 230px; 
+	right: 0px; 
+	z-index: 1001; 
+	line-height: 30px; 
+	opacity: 1;
+}
+
+#cs-next-coin-slider {
+	position: relative; 
+	top: 10px; 
+	right: 0px; 
+	z-index: 1001; 
+	line-height: 30px; 
+	opacity: 1;
+}
+</style>
+
+
+
+
+<html><head>
+
+        <title> Southeast University</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <link rel="canonical" href="http://www.seu.ac.bd/">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Southeast-University,Southeast,Tejgaon,Banani,SEU,SEU-Bangladesh">
+
+        <meta name="description" content="
+        Southeast University (SEU) is pledged to impart quality education at an affordable cost and seeks to evolve as a centre of excellence. In this modern competitive world knowledge and technology are changing breathlessly fast, SEU keeps constant vigilance to update and refocus it's curriculum accordingly">
+
+        <meta name="revisit-after" content="1 days">
+        <meta name="ROBOTS" content="ALL">
+
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+        <!-- Slider -->
+
+        <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="slider/coin-slider.js"></script>
+
+        <link rel="stylesheet" href="slider/coin-slider-styles.css" type="text/css">
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#coin-slider').coinslider();
+            });
+        </script>
+        <!-- end Slider -->
+        <!-- Facebox -->
+        <link href="facebox/facebox.css" media="screen" rel="stylesheet" type="text/css">
+        <!-- <script src="lib/jquery.js" type="text/javascript"></script> -->
+        <script src="facebox/facebox.js" type="text/javascript"></script>
+        <script src="facebox/facebox.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $('a[rel*=facebox]').facebox();
+            });
+        </script>
+        <!-- End Facebox -->
+        <!-- My Style css -->
+
+        <!-- new gallery implementation  -->
+        <link rel="stylesheet" href="lightbox/dist/css/lightbox.css">
+        <!-- end of implementation -->
+
+        <script src="js/vertical.news.slider.js"></script>
+        <!--<script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-1965499-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>-->
+
+        <link type="text/css" rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/vertical.news.slider.css?v=1.0">
+        <!-- <link type="text/css" rel="stylesheet" href="dept/dept_style.css" /> -->
+
+        <!-- accordian -->
+          <link rel="stylesheet" href="css/jquery-ui-accordian">
+          <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+          <script src="js/jquery-ui.js"></script>
+          <script>
+          $( function() {
+            $( "#accordion" ).accordion();
+          } );
+          </script>
+
+        <!-- end of accordian -->
+
+        <script type="text/javascript">
+				    $(document).ready(function(){
+
+         //                setTimeout(showPopUp, 5000);
+
+				     //  $("#thover").click(function(){
+				    	// 	$(this).fadeOut();
+				     //    $("#tpopup").fadeOut();
+				    	// });
+
+
+				     //  $("#tclose").click(function(){
+				    	// 	$("#thover").fadeOut();
+				     //    $("#tpopup").fadeOut();
+				    	// });
+
+		    	});
+
+                function showPopUp(){
+                    $("#thover").show();
+                    $("#tpopup").fadeIn(1500);
+                }
+		</script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>    <body>
+    <div id="thover"></div>
+					  <div id="tpopup">
+						<img style="border-radius: 5px;" src="images/happy_new_year_2018.jpg" width="100%" height="100%">
+						<div id="tclose">X</div>
+      		</div>
+        <div class="wrapper">
+           <!--  <div class="reg_image">
+                <a href="about.php?id=career">
+                 <img src="images/Hiring.png">
+                </a>
+            </div> -->
+            <div class="container_top">
+                <div class="container_top_inner">
+                    <div class="header">
+    <div class="header-inner">
+        <div class="logo">
+            <a href="index.php"> <img src="images/logo_1.png" height="100S%"> </a>
+        </div>        
+        <div class="top-nav">
+            <div class="top-nav-inner">                
+                <ul class="top-menu">                                    
+                    <li class="first leaf menu-mlid-2917">
+                        <a href="http://elife.seu.ac.bd/onlineadmission/" class="icon-top-menu icon-onlineadmission" target="_blank">Online Admission</a>
+                       
+                    </li>
+                    <li class="first leaf menu-mlid-2917">
+                       
+                        <a href="index.php" class="icon-top-menu icon-home">Home</a>
+                    </li>
+                    <!-- <li class="leaf"><a href="http://my.seu.ac.bd/convocation" target="_blank" class="icon-top-menu icon-conv">Registration &nbsp;</a></li> -->
+                    <li class="leaf"><a href="http://mail.seu.edu.bd/" target="_blank" class="icon-top-menu icon-webmail">Email</a></li>
+                    <li class="leaf"><a href="http://my.seu.edu.bd/" target="_blank" class="icon-top-menu icon-support">USS</a></li>
+                    
+                  
+                    <li class="leaf"><a href="https://goo.gl/forms/nT0O75d0tRrnm8wk1" target="_blank" class="icon-top-menu icon-alumni">Alumni</a></li>
+                    <li class="last"><a href="career/index.php" class="icon-top-menu icon-job"> Jobs@SEU</a></li>
+                    <li class="last"><a href="contact.php" class="icon-top-menu icon-contact"> Contact</a></li>
+                    
+                </ul>
+            </div><!-- end top-nav-inner -->
+        </div><!-- end top-nav -->
+    </div><!-- end header-inner -->
+</div><!-- end header -->
+
+<!--
+<li class="last"><a href="http://www.seu-dcs.com/" target="_blank" class="icon-top-menu icon-dcs">DCS</a></li>
+<li class="leaf"><a href="#" class="icon-top-menu icon-alumni">Alumni</a></li>
+-->
+                    <div class="navbar">
+    <div class="navbar-inner">        
+        <ul class="nav">
+            <li><a href="#"> About </a>
+                <ul>
+                    <li> <a href="about.php?id=seu_trust"> SEU Trust</a></li>
+                    <li> <a href="about.php?id=seu_trust_ogranogram"> SEU Trust Organogram</a></li>
+                    <!--<li> <a href="about.php?id=seu_organogram"> SEU Organogram</a></li>-->
+                    <li> <a href="about.php?id=chairman_seut"> Chairman SEUT</a></li>
+                    <li><a href="about.php?id=mission">Mission</a></li>
+                    <li><a href="about.php?id=vision">Vision</a></li>
+                    <li><a href="about.php?id=goal_and_scope">Goal &amp; Scope</a></li>
+                    <li><a href="career/index.php">Career @ SEU</a></li>                     
+                </ul>
+            </li> 
+            <li><a href="#"> Academics </a> 
+                <ul>
+                    <li><a href="science_school.php">School of Science &amp; Engineering</a></li>
+                    <!-- <li><a href="business_school.php">School of Business Studies</a></li> -->
+                    <li><a href="dept/bba.php?id=overview">Southeast Business School</a></li>
+                    <li><a href="arts_school.php">School of Arts &amp; Social Sciences </a></li>
+                    <li><a href="dept/seu_code_of_coduct.pdf" target="_blank"> Code of Conduct </a></li>
+                    <li><a href="iqac.php"> IQAC </a></li>
+                </ul> 
+            </li> 
+            <li><a href="#"> Admission </a> 
+                 <ul>
+                    <li><a href="admission.php?id=admission_notice">Admission Notice</a></li>
+                    <li><a href="admission.php?id=undergraduate">Undergraduate</a></li>
+                    <li><a href="admission.php?id=graduate">Graduate</a></li>
+                    <li><a href="admission.php?id=tuition_fee">Tuition Fee</a></li>
+                    <li><a href="admission.php?id=scholarship_waiver">Scholarship / Waiver</a></li>
+                    <li><a href="admission.php?id=foreign_students">Foreign Students</a></li>
+                    <li><a href="admission.php?id=admission_form">Admission Form</a></li>
+                </ul>
+            </li> 
+            <li><a href="#"> Administration </a> 
+                    <ul>
+                        <li><a href="administration.php?id=seut_office">Office of SEU Trust</a></li>
+                        <li><a href="administration.php?id=the_vice_chancellor_office">The Vice Chancellor Office</a></li>
+                        <li><a href="administration.php?id=the_pro_vice_chancellor_office">The Pro Vice Chancellor Office</a></li>
+                        <li><a href="administration.php?id=registrar_office">Registrar Office</a></li>
+                        <li><a href="administration.php?id=accounts_and_finance_controller_office">Accounts &amp; Finance Office</a></li>
+                        <li><a href="administration.php?id=controller_of_examinations_office">Controller of Examinations Office</a></li>                        
+                        <li><a href="administration.php?id=library_office">Library Office</a></li>
+                        <li><a href="administration.php?id=admission_office">Admission &amp; Promotion</a></li>
+                        <li><a href="administration.php?id=it_administration_office">Office of the Information Technology (IT)</a></li>
+                        <li><a href="administration.php?id=isdt">Integrated Software Development Team</a></li>
+                        <li><a href="administration.php?id=public_relations_office">Branding, Communication &amp; Public Relations</a></li>
+                        <li><a href="administration.php?id=dcs">Career &amp; Professional Development Services </a></li>
+                        <li><a href="administration.php?id=irt_office">IRT</a></li>
+                        <li><a href="administration.php?id=emeritus_office">Office of the Professor Emeritus</a></li>
+                        <!-- <li><a href="administration.php?id=dean_office">Office of the Dean</a></li> -->
+                    </ul>
+            </li> 
+            <li><a href="#"> Research </a> 
+                <ul>
+                    <li><a href="research.php?id=irt">Institute of Research &amp; Training</a></li>
+                    <li><a href="research.php?id=dirmessage">IRT Director's Message</a></li>
+                    <li><a href="research.php?id=centres">Research Centres</a></li>                                       
+                    <li><a href="research.php?id=journals">Journals</a></li>
+                    <li><a href="seujse/index.php" target="_blank">SEUJSE</a></li>
+                </ul>
+            </li> 
+   <!--          <li><a href="./library/library.php"> Library </a> </li>  -->
+            <li><a href="http://library.seu.edu.bd" target="_blank"> Library </a> </li> 
+            <li><a href="campus_life.php"> Campus Life </a> 
+                <ul>
+                    <li><a href="campus_life.php?id=cpds"> Career &amp; Professional Development Services </a></li>
+                    <li><a href="campus_life.php?id=career_services"> Career Services </a></li>
+                    <li><a href="campus_life.php?id=student_affairs"> Student Affairs/Club Affairs </a></li>
+                    <li><a href="campus_life.php?id=international_affairs">International Affairs </a></li>
+                    <li><a href="campus_life.php?id=alumni_affairs">Alumni Affairs</a></li>
+                    <li><a href="clubs1.php"> Clubs </a></li>
+                    <li><a href="campus_life.php?id=canteen"> Canteen </a></li>
+					<li><a href="campus_life.php?id=health_safety"> Health &amp; Safety </a></li>
+					<li><a href="campus_life.php?id=campus"> Campus </a></li>
+					<li><a href="campus_life.php?id=accommodation"> Accommodation </a></li>
+                </ul>
+            </li> 
+            <!-- <li> <a href="photo_gallery.php?id=gengall"> Photo Gallery </a> </li>            -->
+            <li> <a href="gallery.php"> Photo Gallery </a> </li>           
+        </ul>    
+    </div><!--end navbar-inner -->
+</div><!-- end navbar -->
+                    <div class="slider">
+    <div class="slider-inner">
+        <div class="coin-slider" id="coin-slider-coin-slider"><div id="coin-slider" style="width: 940px; height: 300px; position: relative; background-image: url(https://seu.edu.bd/slider/Slide4Orientation.JPG); background-position: 0% 0%;"> 
+            <!--  <a href="#">
+            
+                <img src='slider/International-Conference.jpg'>                
+            </a> -->
+            
+
+            <!-- <a href="#">
+                <img src='slider/Summer_05_Orientation_backdrop.jpg'>                
+            </a>  
+ -->
+
+            <!--  <a href="#">
+                <img src='slider/AdmissionSlider001.jpg' style="height:300px">                
+            </a>  
+ -->
+
+            
+           <!--  <a href="#"><img src='slider/orientation_for_web.jpg'></a> -->
+           <!--  <a href="#"><img src='slider/Slide1.jpg'></a> -->
+            <!-- <a href="#"><img src='slider/orientation-slide-notification.jpg'></a> -->
+            <!-- <a href="#"><img src='slider/Fall-18new.jpg'></a> -->
+            
+            <a href="#"><img src="slider/SahittoUtshob19.jpg" style="display: none;"></a>
+            <a href="#"><img src="slider/SP19.jpg" style="display: none;"></a>
+            
+           <!--  <a href="#"><img src='slider/CarnivalBanner.jpg'></a> -->
+            <!-- <a href="#"><img src='slider/alumni_reunion_2018.jpg'></a> -->
+            <!-- <a href="#"><img src='slider/SP18V4.jpg'></a> -->
+            <!-- <a href="#"> <img src='slider/conv6_3.jpg'></a>  
+            <a href="#"> <img src='slider/conv6_2.jpg'></a> -->
+           
+            <!-- <a href="#"><img src='slider/banner_04.jpg'></a>   -->
+            <a href="#"><img src="slider/banner_03.jpg" style="display: none;"></a>
+            <a href="#"><img src="slider/Slide4Orientation.JPG" style="display: none;"></a>
+            <a href="#"><img src="slider/5conv_1.jpg" style="display: none;"></a>  
+            <a href="#"><img src="slider/Slide6JobFair.JPG" style="display: none;"></a>  
+            <a href="#"><img src="slider/Slide7Alumni.JPG" style="display: none;"></a>  
+            <a href="#"><img src="slider/Slide815years.jpg" style="display: none;"></a>  
+   
+   
+           
+            <!-- <a href="#"> <img src="slider/banner_05.jpg" />                
+            </a> -->
+            <!--
+            <a href="#"> <img src="slider/conv_banner1.jpg" />                
+            </a>
+            <a href="#"> <img src="slider/conv_banner2.jpg" />                
+            </a>
+            -->                                    
+           <!--  <a href="#">
+                <img src='slider/banner_02.jpg'>
+            </a> -->
+            <!--
+            <a href="#">
+                <img src='slider/banner_08.jpg'>         
+            </a>
+            -->
+          <!--   <a href="#"> <img src="slider/conv_banner.jpg" /> </a>             -->
+            <!-- <a href="#"> <img src="slider/pmo.jpg" /> </a> -->
+            <!-- <a href="#"> <img src="slider/prsofc.jpg" />                
+            </a> -->
+            
+            <!--
+            <a href="#"> <img src="slider/banner_06.jpg" />               
+            </a>
+            -->
+            <!--
+            <a href="#"> <img src="slider/banner_07.jpg" />                
+            </a>
+            -->                         
+        <div class="cs-title" id="cs-title-coin-slider" style="position: absolute; right: 0px; z-index: 1000; opacity: 0;"></div><a href="#" class="cs-coin-slider" id="cs-coin-slider11" style="width: 135px; height: 60px; float: left; position: absolute; left: 0px; top: 0px; opacity: 1; background-image: url(https://seu.edu.bd/slider/banner_03.jpg); background-position: 0px 0px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider12" style="width: 135px; height: 60px; float: left; position: absolute; left: 135px; top: 0px; opacity: 1; background-image: url(https://seu.edu.bd/slider/banner_03.jpg); background-position: -135px 0px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider13" style="width: 134px; height: 60px; float: left; position: absolute; left: 270px; top: 0px; opacity: 1; background-image: url(https://seu.edu.bd/slider/banner_03.jpg); background-position: -270px 0px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider14" style="width: 134px; height: 60px; float: left; position: absolute; left: 404px; top: 0px; opacity: 1; background-image: url(https://seu.edu.bd/slider/banner_03.jpg); background-position: -404px 0px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider15" style="width: 134px; height: 60px; float: left; position: absolute; left: 538px; top: 0px; opacity: 1; background-image: url(https://seu.edu.bd/slider/banner_03.jpg); background-position: -538px 0px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider16" style="width: 134px; height: 60px; float: left; position: absolute; left: 672px; top: 0px; opacity: 1; background-image: url(https://seu.edu.bd/slider/banner_03.jpg); background-position: -672px 0px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider17" style="width: 134px; height: 60px; float: left; position: absolute; left: 806px; top: 0px; opacity: 1; background-image: url(https://seu.edu.bd/slider/banner_03.jpg); background-position: -806px 0px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider21" style="width: 135px; height: 60px; float: left; position: absolute; left: 0px; top: 60px; opacity: 1; background-image: url(https://seu.edu.bd/slider/SP19.jpg); background-position: 0px -60px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider22" style="width: 135px; height: 60px; float: left; position: absolute; left: 135px; top: 60px; opacity: 1; background-image: url(https://seu.edu.bd/slider/SP19.jpg); background-position: -135px -60px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider23" style="width: 134px; height: 60px; float: left; position: absolute; left: 270px; top: 60px; opacity: 1; background-image: url(https://seu.edu.bd/slider/SP19.jpg); background-position: -270px -60px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider24" style="width: 134px; height: 60px; float: left; position: absolute; left: 404px; top: 60px; opacity: 1; background-image: url(https://seu.edu.bd/slider/SP19.jpg); background-position: -404px -60px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider25" style="width: 134px; height: 60px; float: left; position: absolute; left: 538px; top: 60px; opacity: 1; background-image: url(https://seu.edu.bd/slider/SP19.jpg); background-position: -538px -60px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider26" style="width: 134px; height: 60px; float: left; position: absolute; left: 672px; top: 60px; opacity: 1; background-image: url(https://seu.edu.bd/slider/SP19.jpg); background-position: -672px -60px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider27" style="width: 134px; height: 60px; float: left; position: absolute; left: 806px; top: 60px; opacity: 1; background-image: url(https://seu.edu.bd/slider/banner_03.jpg); background-position: -806px -60px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider31" style="width: 135px; height: 60px; float: left; position: absolute; left: 0px; top: 120px; opacity: 1; background-image: url(https://seu.edu.bd/slider/SP19.jpg); background-position: 0px -120px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider32" style="width: 135px; height: 60px; float: left; position: absolute; left: 135px; top: 120px; opacity: 1; background-image: url(https://seu.edu.bd/slider/Slide4Orientation.JPG); background-position: -135px -120px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider33" style="width: 134px; height: 60px; float: left; position: absolute; left: 270px; top: 120px; opacity: 1; background-image: url(https://seu.edu.bd/slider/Slide4Orientation.JPG); background-position: -270px -120px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider34" style="width: 134px; height: 60px; float: left; position: absolute; left: 404px; top: 120px; opacity: 1; background-image: url(https://seu.edu.bd/slider/Slide4Orientation.JPG); background-position: -404px -120px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider35" style="width: 134px; height: 60px; float: left; position: absolute; left: 538px; top: 120px; opacity: 1; background-image: url(https://seu.edu.bd/slider/Slide4Orientation.JPG); background-position: -538px -120px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider36" style="width: 134px; height: 60px; float: left; position: absolute; left: 672px; top: 120px; opacity: 1; background-image: url(https://seu.edu.bd/slider/SP19.jpg); background-position: -672px -120px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider37" style="width: 134px; height: 60px; float: left; position: absolute; left: 806px; top: 120px; opacity: 1; background-image: url(https://seu.edu.bd/slider/banner_03.jpg); background-position: -806px -120px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider41" style="width: 135px; height: 60px; float: left; position: absolute; left: 0px; top: 180px; opacity: 1; background-image: url(https://seu.edu.bd/slider/SP19.jpg); background-position: 0px -180px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider42" style="width: 135px; height: 60px; float: left; position: absolute; left: 135px; top: 180px; opacity: 1; background-image: url(https://seu.edu.bd/slider/Slide4Orientation.JPG); background-position: -135px -180px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider43" style="width: 134px; height: 60px; float: left; position: absolute; left: 270px; top: 180px; opacity: 0; background-image: url(https://seu.edu.bd/slider/Slide4Orientation.JPG); background-position: -270px -180px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider44" style="width: 134px; height: 60px; float: left; position: absolute; left: 404px; top: 180px; opacity: 0; background-image: url(https://seu.edu.bd/slider/Slide4Orientation.JPG); background-position: -404px -180px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider45" style="width: 134px; height: 60px; float: left; position: absolute; left: 538px; top: 180px; opacity: 1; background-image: url(https://seu.edu.bd/slider/SP19.jpg); background-position: -538px -180px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider46" style="width: 134px; height: 60px; float: left; position: absolute; left: 672px; top: 180px; opacity: 1; background-image: url(https://seu.edu.bd/slider/SP19.jpg); background-position: -672px -180px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider47" style="width: 134px; height: 60px; float: left; position: absolute; left: 806px; top: 180px; opacity: 1; background-image: url(https://seu.edu.bd/slider/banner_03.jpg); background-position: -806px -180px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider51" style="width: 135px; height: 60px; float: left; position: absolute; left: 0px; top: 240px; opacity: 1; background-image: url(https://seu.edu.bd/slider/SP19.jpg); background-position: 0px -240px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider52" style="width: 135px; height: 60px; float: left; position: absolute; left: 135px; top: 240px; opacity: 1; background-image: url(https://seu.edu.bd/slider/banner_03.jpg); background-position: -135px -240px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider53" style="width: 134px; height: 60px; float: left; position: absolute; left: 270px; top: 240px; opacity: 1; background-image: url(https://seu.edu.bd/slider/banner_03.jpg); background-position: -270px -240px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider54" style="width: 134px; height: 60px; float: left; position: absolute; left: 404px; top: 240px; opacity: 1; background-image: url(https://seu.edu.bd/slider/banner_03.jpg); background-position: -404px -240px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider55" style="width: 134px; height: 60px; float: left; position: absolute; left: 538px; top: 240px; opacity: 1; background-image: url(https://seu.edu.bd/slider/banner_03.jpg); background-position: -538px -240px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider56" style="width: 134px; height: 60px; float: left; position: absolute; left: 672px; top: 240px; opacity: 1; background-image: url(https://seu.edu.bd/slider/banner_03.jpg); background-position: -672px -240px;"></a><a href="#" class="cs-coin-slider" id="cs-coin-slider57" style="width: 134px; height: 60px; float: left; position: absolute; left: 806px; top: 240px; opacity: 1; background-image: url(https://seu.edu.bd/slider/banner_03.jpg); background-position: -806px -240px;"></a><div id="cs-navigation-coin-slider" style="display: none;"><a href="#" id="cs-prev-coin-slider" class="cs-prev" style="position: absolute; top: 270px; right: 0px; z-index: 1001; line-height: 30px; opacity: 0.7;"> </a><a href="#" id="cs-next-coin-slider" class="cs-next" style="position: absolute; top: 270px; right: 0px; z-index: 1001; line-height: 30px; opacity: 0.7;"> </a></div></div><div id="cs-buttons-coin-slider" class="cs-buttons" style="right: 5%; margin-right: -65px; margin-top: -65px; position: relative;"><a href="#" class="cs-button-coin-slider" id="cs-button-coin-slider-1">1</a><a href="#" class="cs-button-coin-slider" id="cs-button-coin-slider-2">2</a><a href="#" class="cs-button-coin-slider" id="cs-button-coin-slider-3">3</a><a href="#" class="cs-button-coin-slider" id="cs-button-coin-slider-4">4</a><a href="#" class="cs-button-coin-slider cs-active" id="cs-button-coin-slider-5">5</a><a href="#" class="cs-button-coin-slider" id="cs-button-coin-slider-6">6</a><a href="#" class="cs-button-coin-slider" id="cs-button-coin-slider-7">7</a><a href="#" class="cs-button-coin-slider" id="cs-button-coin-slider-8">8</a></div></div><!-- end coin-slider-->
+
+        </div><!-- end slider-inner -->
+
+</div><!-- end slider -->
+                    
+                    <div class="marq">
+                        <marquee direction="left" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="2" scrolldelay="50">
+                            <!-- <b>"Admission Carnival – Summer 2017"</b> is ongoing <b>and will continue till 18th May, 2017 from 9 am to 5 pm </b>at the Seminar Hall of the main building (House-64, Road- 18, Block-B, Banani, Dhaka).  <b>50% discount on admission fee </b>during the carnival. For more information/Helpline: 01911781327, 01766348518 -->
+                            <!--Admission Summer 2017 is going on... ..
+                            Last date of Admission: May 31, 2017... ..-->
+
+                           <!--  Admission Carnival Summer 2018, From 15 May to 20 May... Special Gift on Spot Admission...  -->Admission Open Spring-19... Admission Forms are available at Admission office...
+                    <!--         Admission for Bachelor of Pharmacy (Summer Semester 2017) is going on... .. -->
+                            For more information 01911781327, 01766348518... <!-- Orientation Program for the newly admitted students of the Spring Semester 2018 to be held on 27 January 2018 (Saturday) at 10.30 a.m. at the Permanent Campus of Southeast University (251/A & 252, Tejgaon, Dhaka-1208). Students are requested to attend the program and collect their student catalog from Admission & Promotion Department booth. -->
+                            <!-- Admission test will be held on 11th March 2017....Please collect your Admission forms from admission office... -->
+
+
+                            <!-- Admission of  Spring-2017 semester will continue till January 31, 2017... ..
+                            Admission Forms are available at Admission office... .. -->
+                            <!-- Admission going on Spring-2017... ..
+                            Last date of Admission 26th January, 2017.... -->
+                            <!-- Admission test will be held on 10th December, 2016... .. -->
+                            <!-- Orientation Program of the Spring Semester 2017 will be held on January 23, 2017 at 11.00 a.m. at the Permanent Campus of SEU... ..  -->
+                           <!--Fall-2016: Registration is ongoing till September 26, 2016... ..  -->
+
+                            <!-- H.S.C. Appeared Candidates are Eligible to apply... ..    -->
+
+                            <!--  Registration (Online & Final) of 6th Convocation is ongoing <a href="http://my.seu.ac.bd/convocation/" target="_blank" style="color:blue">Click here to register</a> -->
+                            <!--Date extended for registration (Online & Final) of 6th Convocation up to 15th October 2016 : <a href="http://my.seu.ac.bd/convocation/" target="_blank" style="color:blue">Click here to register</a> -->
+
+
+                        </marquee>
+                    </div>
+                </div><!-- end container_top_inner -->
+            </div><!-- end container_top -->
+        </div><!-- end  top wrapper -->
+
+        <div class="center-band">
+            <div class="center-band-inner">
+
+                <div class="box1">
+                    <h3> Academics </h3>
+                    <ul>
+
+                        <li><a href="science_school.php">School of Science &amp; Engineering</a></li>
+                        <li><a href="dept/bba.php?id=overview">School of Business Studies</a></li>
+                        <li><a href="arts_school.php">School of Arts &amp; Social Sciences </a></li>
+                        <li><a href="center_band.php?id=undergraduate_education"> Undergraduate Program </a></li>
+                        <li><a href="center_band.php?id=graduate_education"> Graduate Program </a></li>
+                        <!--<li><a href="center_band.php?id=schools"> Schools </a></li>-->
+
+                        <li><a href="center_band.php?id=acacal"> Academic Calendar</a></li>
+                    </ul>
+                </div>
+
+                <div class="box2">
+
+                    <h3> Student Life </h3>
+                    <ul>
+                        <li><a href="center_band.php?id=online_learning">Advising Flow Chart </a></li>
+                        <li><a href="clubs.php?id=debate_club"> Clubs </a></li>
+                        <li><a href="center_band.php?id=living_campuses"> Living On and Off Campus </a></li>
+                        <li><a href="center_band.php?id=health_counseling"> Health / Counseling </a></li>
+                        <li><a href="campus_life.php?id=accommodation"> Accommodation </a></li>
+                    </ul>
+                </div>
+                <div class="box3">
+                    <h3> Where We Are </h3>
+                    <ul>
+                        <li><a href="center_band.php?id=maps_directions"> Maps / Directions </a></li>
+                        <li><a href="campus_life.php?id=campus">  Campus </a></li>
+                        <li><a href="research.php?id=centres"> Research </a></li>
+                        <li>  <a href="downloads/SEUBrochureFinal.pdf" target="_blank">SEU Brochure </a> </li>
+                        <li>  <a href="downloads/BulletinSpring2018.pdf" target="_blank">Campus Bulletin </a> </li>
+                    </ul>
+
+
+                </div>
+                <div class="box4">
+                    <h3> Follow us on </h3>
+                    <table width="35%">
+                        <tbody><tr>
+                            <td>
+                                <a href="https://www.facebook.com/seu.official.info" target="_blank">
+                                    <img src="images/social-logo/facebook.png" alt="facebook" height="30" width="30">
+                                </a>
+                            </td>
+
+                            <td>
+                                <a href="https://twitter.com/SoutheastU" target="_blank">
+                                    <img src="images/social-logo/twitter.png" alt="twitter" height="30" width="30">
+                                </a>
+                            </td>
+
+                        
+                            
+                        </tr>
+                         
+                         <tr>
+
+                            <td>
+                                <a href="https://plus.google.com/113340200851391001623/" target="_blank">
+                                    <img src="images/social-logo/g+.png" alt="googleplus" height="30" width="30">
+                                </a>
+                            </td>
+
+                         
+                              <td>
+                                <a href="http://www.linkedin.com/company/southeast-university-banani-dhaka" target="_blank">
+                                    <img src="images/social-logo/linkedin.png" alt="linkedin" height="30" width="30">
+                                </a>
+                            </td>
+                          
+                              
+                        </tr>
+                 
+                    </tbody></table>
+                    <table>
+                        <tbody><tr>
+                            <td>
+                                <a href="https://goo.gl/ugHuXk" target="_blank">
+                                    <img src="images/social-logo/youtube.png" alt="youtube" height="17" width="60">
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </div><!-- end box4 -->
+
+               <!--  <div class="box5">
+                    <a href="downloads/SEUBrochureFinal.pdf" target="_blank">
+                    <h3> SEU Brochure</h3>
+                    <div align="center">
+                          <img src="images/seu_logo_broch.png" >
+                    </div>
+                    </a>
+                </div> -->
+
+                <!-- <div class="box5">
+                    <div align="center">
+                         <iframe width="98%" height="145px" src="https://www.youtube.com/embed/qsPh1QOFGhY?rel=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                </div> -->
+
+                <div style="width:250px; float:left; height:150px;">
+                    <div id="accordion" class="ui-accordion ui-widget ui-helper-reset" role="tablist">
+                        <h3 class="ui-accordion-header ui-corner-top ui-state-default ui-accordion-header-active ui-state-active ui-accordion-icons" role="tab" id="ui-id-1" aria-controls="ui-id-2" aria-selected="true" aria-expanded="true" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-s"></span> <strong> 6th Convocation Video </strong> </h3>
+                        <div class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content ui-accordion-content-active" id="ui-id-2" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="false" style="display: block; height: 91px;">
+                            <p>
+                                <iframe width="98%" height="85px" src="https://www.youtube.com/embed/lUX5GXO1hIM" frameborder="0" allowfullscreen=""></iframe>
+                            </p>
+                        </div>
+                        <h3 class="ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span> <strong> 5th Convocation Video </strong></h3>
+                        <div class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-4" aria-labelledby="ui-id-3" role="tabpanel" aria-hidden="true" style="display: none; height: 91px;">
+                            <p>
+                                 <iframe width="98%" height="85px" src="https://www.youtube.com/embed/qsPh1QOFGhY?rel=0" frameborder="0" allowfullscreen=""></iframe>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+               <!--
+                <div class="box5">
+                    <h3> 4th&nbsp;Convocation</h3>
+                    <div align="center">
+                        <a href="4conv.php">
+                          <img src="images/4conlogo_1.png" >
+                        </a>
+                    </div>
+                </div>
+               -->
+            </div> <!-- end center-band-inner -->
+        </div><!--end center-band -->
+
+        <div class="wrapper">
+            <div class="container_bottom">
+                <div class="content-cotainer">
+                    <div class="content-inner">
+                         <div class="content">
+    <div class="row1"> 
+        <div class="col1"> 
+            <div class="message-box">
+                <a href="#chairman" rel="facebox">
+                    <h3 style="line-height: 24px"> Message of the Chairman, Board of Trustees </h3>
+                    <p><img src="images/chairman.gif" style="width:100px;">
+                        With a humble beginning in 2002 and a mere 27 students, Southeast University (SEU) has become one of the most successful universities in the country, having the highest number of student enrolment, permanent campus coupled with state-of-the-art facility and above all, a centre of transcendence...
+                    </p>
+                </a>
+                <div id="chairman" style="display:none">
+                    <p></p><h3>Message of the Chairman, Board of Trustees  </h3>
+                    <br>
+                    With a humble beginning in 2002 and a mere 27 students, Southeast University (SEU) has become one of the most successful universities in the country, having the highest number of student enrolment, permanent campus coupled with state-of-the-art facility and above all, a centre of transcendence.
+                    <br><br>
+                    In many ways, SEU has been distinct from day one, facilitating the scope of higher education for emerging middle class, while continually thrusting for improvement and focusing on the future with a philanthropic fortitude.
+                    <br><br>
+                    For more than a decade, SEU has been the destination of talented academicians, scholars and students, having the impetus to teach, perform, create, learn and study. Amidst an astonishing diversity of programs, exploration of innovative ideas, pursuance of new knowledge and art, our classrooms are filled with vibrancy that comes from being an academy committed to research, discovery, creativity and dynamic intellectual exchange.
+                    <br><br>
+                    We take pride to be an educational institution which nurtures individual excellence and community well-being.
+
+                    <br><br>
+                    Mr. Md. Rezaul Karim  <br>
+
+                    Chairman, Board of Trustees  <br>
+                    Southeast University Trust
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col2">
+            <div class="message-box">
+                <a href="#vc" rel="facebox">
+                    <h3> From the Desk of VC </h3>
+                    <p><img src="administration/images/vcoffice/vc.jpg" style="width:100px;">
+        
+                    Greetings from Southeast University! <br>
+                    Southeast University is one of the fastest growing private universities in Bangladesh. With more than 12,000 students and 250 full-time faculty members, our university is now poised to achieving excellence in teaching, research and administration.
+                    </p> </a>
+
+                    <div id="vc" style="display: none">
+                        <p></p><h3> From the Desk of Vice Chancellor </h3>
+                        <br>
+                        Greetings from Southeast University! 
+                        <br><br>
+                        Southeast University is one of the fastest growing private universities in Bangladesh. With more than 12,000 students and 250 full-time faculty members, our university is now poised to achieving excellence in teaching, research and administration. Currently there are 95 private universities in the country. Why should students and guardians choose Southeast University while there are so many other universities offering the same degree programs?
+                        <br><br>
+                         
+                        Private universities started their journey in Bangladesh in 1993 after the promulgation of the Private University Act 1992. Southeast University (SEU) was established in 2002. When this university started operating, 20 private universities were already established in the country over a span of 10 years. So, the common question was “What difference would Southeast University make as the 21st private university?” While celebrating its 15th anniversary as a great university in 2017, it is only natural for the institution to take stock of itself, counting blessings, embarking on rigorous self-examination and thereby learn from its past.
+                        <br><br>
+                        The journey of SEU in 2002 did not start in a bed of roses; it was rather a thorny travel, full of challenges.  The twenty universities that were already operating at that time had substantive first-mover advantages.  SEU, being a second generation private university, had to find a niche market to thrive and grow.  The founders of the university had to overcome some initial turmoil.  They coped with the crisis successfully.  Under an astute and farsighted leadership of the university’s founders and the top administration, the university soon created a well-defined target market along with a focused mission and vision for the university.  While the success of most of the universities that started at the very beginning is often attributed to “good luck” and first-mover advantages, SEU had to capitalize on building unique differences from other universities.
+                        <br><br>
+                        The founders of the university emphasized from the beginning that education was not to be treated as a commercial commodity.  While most of the founders were top businessmen of this country, they established SEU as a purely non-profit institution so that higher education could be offered at an affordable cost, making it accessible to the children of lower-income families.  While the university has a very good financial footing with more than 12,000 students now, the founders have remained firmly committed to keeping it fully non-profit.  The surplus of the university is reinvested for infrastructural development and expansion of the university.  As a result, the number of students applying for admission into different programs of this university grew rapidly.  The tuition cost is low, but the quality of education maintained by the university is better than many of the universities that were established before and had been charging higher tuition.  SEU has not deviated from its founding principle and wants to remain non-profit in the future.
+                        <br><br>
+                        Most of the private universities offer only those disciplines that have high market demand so that students can get employment as soon as they finish their degree.  But a university cannot do justice to itself unless it offers certain basic disciplines that may not be commercially viable but are essential for human development.  These disciplines are better known as “socially desirable” as opposed to “market-driven” disciplines.  Very few private universities offer socially desirable disciplines such as Bangla Language and Literature.  SEU first introduced a four-year Bachelor (Hons) program in Bangla.  Although the initial enrollment was low, it started growing slowly but steadily.  Later on, a Master’s program in the same subject was also introduced.  The tuition cost in this Department is very low, but it plays a vital role in enriching the campus life by providing leadership in organizing various extracurricular programs. We have recently introduced an award on “Literature” and “Children’s Literature” to be given in the month of February every year. Emeritus Professor Anisuzzaman and Professor Shamsuzzaman Khan, Director General of Bangla Academy are among the members of the Award Committee.
+                        <br><br>
+                        The university has started construction of a state-of-the art permanent campus at Tejgaon, the heart of the city of Dhaka.  While most of the private universities had to move out of Dhaka city to purchase sufficient land for the permanent campus, SEU has made a great difference by purchasing a total of 12 bigha land at the heart of the city.  The permanent campus is quite spacious with all amenities available for a world-class modern university. Alongside five rented buildings at Banani, at present three departments are running all their classes in the permanent campus at Tejgaon.
+                        <br><br>
+                        Some private universities are reluctant to introduce science and engineering subjects requiring huge financial investment in laboratory facilities. Southeast University has been an exception. Our Textile Engineering department is highly reputable in the market.  The Department of Pharmacy is accredited by the Pharmacy Council of Bangladesh.  The Bachelor of Architecture has obtained accreditation by the Institute of Architects in Bangladesh.  All of these disciplines require expensive laboratory facilities.  The university authority was very happy to make such investments with a view to preparing future engineers, architects and pharmacists of this country.
+
+
+                        <br><br>
+                        We are very proud of our Law and Justice Department.  Most of our law graduates have become renowned legal practitioners.  A few of our graduates are providing leadership in teaching Law and Justice in other private universities.
+                        <br><br>
+                        SEU has a rigorous screening procedure for selecting faculty members.  Most of the faculty members across all Departments are very dedicated and sincere to teaching and research.  They take personalized care of each individual student. SEU also encourages academic research by faculty members.  The Institute of Research and Training (IRT) offers funding for academic research.
+                        <br><br>
+                        Since SEU believes in making higher education accessible to the children of people from all walks of life, it has a generous tuition waiver policy. A large number of students become eligible for tuition waiver based on their academic results every semester.  In addition, tuition waiver is also given based on results in H.S.C./A-Levels and for siblings, females, spouse and corporate groups.  SEU is committed to maintaining educational quality. The Institutional Quality Assurance Cell (IQAC) is a UGC-supported unit which is entrusted with the responsibility of assuring quality of education at the university. Year 2017 is the year of Consolidation and Development. We have been working together toward achieving three goals: 1. building SEU as a center of academic excellence, 2. building SEU as a center of research excellence, and 3. developing this university as a pro-student university. We give high importance on ethical values, morality, and manners and etiquettes. While preparing our students to face the challenges of the global market, we also emphasize on teaching them the history and culture of this country. None of our students were found involved in any militant or antisocial activities.
+                        <br><br>
+                        SEU believes in full integration, based on backward and forward linkages.  Colleges, English-medium schools and employing institutions are our strategic partners.  We also have strategic alliance with foreign universities, government institutions, training institutes and other national and international stakeholders and institutions.  The Department of Career Services plays a vital role in establishing linkages with potential employers for employment and internships.
+                        <br><br>
+                        Innovation is the key to sustainable success of Southeast University. We are never complacent. We continuously look for new ways of doing things. Once we reach our goals, new goals are set at a higher stage. We believe in total quality management and continuous improvement. Founders, teachers, administrators, students and guardians work together at SEU.  That is how we make a difference!
+
+
+                        <br><br>
+                        I would like to cordially invite you to visit our university if you want to know more about us.
+                        <br><br>
+                        Thank you.
+
+
+                        <br><br>
+                        Prof. Dr. ANM Meshquat Uddin <br>
+                        Vice Chancellor (Designate) <br>
+                        Southeast University 
+                        <p></p>
+                    </div>
+            </div>
+        </div>
+        
+         <!-- <div class="col3">
+            <div class="message-box">
+                <a href="#pro_vc" rel="facebox">
+                    <h3> Message of the Pro VC</h3>
+                    <p><img src="images/pro_vc.png" style="width:100px;" />
+                        Welcome to the Southeast University - a unique institution of higher learning and academic excellence. In this age of knowledge, it is the intellectual capital-trained manpower, rather than financial and physical capital, which will give the society strength and prosperity.
+                    </p> 
+                </a>
+
+                <div id="pro_vc" style="display: none">
+                    <p>
+                    <h3> Message of the Pro Vice Chancellor</h3>
+                    <br/>
+                    Welcome to the Southeast University - a unique institution of higher learning and academic excellence. In this age of knowledge, it is the intellectual capital-trained manpower, rather than financial and physical capital, which will give the society strength and prosperity. When knowledge and educated people become important strategic resources for development, the society becomes more dependent upon a University, like Southeast University, which by its nature is not a one-dimensional institution, with a single focus or even a narrowly defined constituency but has multiple missions. We believe in all round personality development of our students and creating human values, which make them responsible citizen of this great country and a globally competent professional to handle any challenge in life.
+                    <br/><br/>
+                    We constantly strive to meet the unique challenges that face Bangladeshi students as they look to assume leadership roles in the region and across the world. All our graduates are prepared with the vital skills of communicating and creative thinking, with deep practical knowledge in their subject, and with an awareness of global perspectives. 
+                    <br/><br/>
+                    It is my pleasure and privilege to welcome you to Southeast University. We look forward to sharing with you in exciting and meaningful explorations of the changing world in which we live.
+                    <br/><br/><br/>
+                    Professor Dr. Md. Humayun Kabir Chowdhury <br/>
+                    Pro Vice Chancellor<br/>
+                    Southeast University
+
+                    </p>
+                </div>
+            </div>
+        </div> --><!-- end col3 -->
+     
+        <div class="col4"> 
+            <div class="message-box">
+                 <img src="images/DiplomaHolder.jpg" width="253px" height="214px"> 
+               <!--  <a href="featured_faculty.php?id=mafizul_islam">
+                    <h3> Featured Faculty </h3> </a>
+                <p><img title="" src="images/DrMafizul.jpg" style="width:75px;"></img> 
+                    Dr. A.F.M.. Mafizul Islam. Professor, School of Business Studies. Director, Institute of Research and Training (IRT).                                        
+                </p>
+                <p><img title="" src="images/arch_chair.gif" style="width:75px;"></img> 
+                    Professor Meer Mobashsher Ali <br/> Department of Architecture </p> -->
+                <a href="featured_faculty.php?id=mafizul_islam">
+                    <h3 style="line-height:27px;"> Featured Faculty </h3> 
+                </a>
+                <div class="news-holder cf">
+                    <ul class="news-headlines">
+                      <li class="nh-anim selected"></li>
+                      <li class="nh-anim"></li>
+                      <li class="nh-anim"></li>
+                      <!-- li.highlight gets inserted here -->
+                    <li class="highlight nh-anim" style="top: 0px; height: 0px;"></li></ul>
+
+                    <div class="news-preview" style="height: 75px;">
+
+                      <!-- <div class="news-content top-content">
+                        <img src="images/Mohammed_Ali_Rashid.jpg"><br/>
+                        <p>Prof. Dr. Mohammed Ali Rashid <br/>Dean <br/>School of Arts and Social Sciences</p>
+                      </div> -->
+                      <!--
+                      <div class="news-content">
+                        <img src="images/DrMafizul.jpg"><br/>                        
+                        <p>Dr. A.F.M.. Mafizul Islam <br/> Professor & Dean (Acting) <br/>School of Business Studies.<br/> Director, Institute of Research and Training (IRT)</p>
+                      </div>
+                      -->
+                      <div class="news-content top-content">
+                     
+                      </div><!-- .news-content -->
+
+                   <!-- .news-content -->
+
+                    </div><!-- .news-preview -->
+                </div><!-- .news-holder -->
+            </div>
+
+        </div><!-- end col4 -->
+</div><!-- end row1 -->
+
+<div class="row2">
+    <div class="col1">
+        <h3><section>&nbsp;News and Events</section></h3>
+       
+
+
+        <!--start news-->
+
+
+
+
+
+
+
+<div class="news">
+                <a href="#news_070219_1" rel="facebox">
+                   <img src="images/news2/news_070219_1.jpg" width="140px" height="100px">
+                    </a><a href="#news_070219_1" rel="facebox">Seminar on Necessity of Higher Education for Textile Engineering at SEU</a>
+
+                    <span class="date">  Feb 07, 2019  </span>
+                                                  
+                     Department of Textile Engineering  and Textile club of Southeast University (SEU) jointly organized ...
+            </div>                                    
+            <div id="news_070219_1" style="display:none;">
+                <span class="date">  Feb 07, 2019 </span>
+                <img src="images/news2/news_070219_1.jpg" width="600px"> <br>
+                <center>              
+                   Seminar on Necessity of Higher Education for Textile Engineering at SEU    
+                </center> 
+                   <br>
+                    <div style="text-align: justify;">  
+
+Department of Textile Engineering  and Textile club of Southeast University (SEU) jointly organized an experience sharing session on "Necessity of Higher Education for Textile Engineers" on 7 February 2019 at SEU Permanent Campus, Tejgoan, Dhaka.
+Prof. Syed Fokhrul Hassan, Chairman of Textile Engineering Department, presided over the program. 
+
+ <br><br>
+  <img src="images/news2/news_070219_1_1.jpg" width="600px"> <br><br>
+Engr. Jannat Nahar Liza, PhD Scholar of Huazhong University of Science &amp; Technology (HUST) China and Former student of Department of Textile Engineering, SEU was the discussant of the program. She described her experience of the journey towards higher education. Among others, faculty members and students were present in the program.
+
+   </div>
+        </div>
+
+
+
+
+<div class="news">
+                <a href="#news_060219_1" rel="facebox">
+                   <img src="images/news2/news_060219_1.JPG" width="140px" height="100px">
+                    </a><a href="#news_060219_1" rel="facebox">Seminar on Anti-militancy at SEU </a>
+
+                    <span class="date">  Feb 06, 2019  </span>
+                                                  
+                     Branding, Communication and Public Relations (BCPR) Department of Southeast University (SEU), in association ...
+            </div>                                    
+            <div id="news_060219_1" style="display:none;">
+                <span class="date">  Feb 06, 2019 </span>
+                <img src="images/news2/news_060219_1.JPG" width="600px"> <br>
+                <center>              
+                   Seminar on Anti-militancy at SEU     
+                </center> 
+                   <br>
+                    <div style="text-align: justify;">  
+
+Branding, Communication and Public Relations (BCPR) Department of Southeast University (SEU), in association with Shuchinta Foundation organized a Seminar on Anti-militancy by following the slogan “জাগো তারুণ্য রুখো জঙ্গিবাদ” on 6 February 2019 at SEU Seminar Hall, Main Building, Banani, Dhaka.
+ <br><br>
+  <img src="images/news2/news_060219_1_1.JPG" width="600px"> <br><br>
+Prof. Dr. ANM Meshquat Uddin, Vice Chancellor of SEU chaired the program while Ms. Sabina Akter Tuhin, Former Member of Parliament and Ms. Nasrin Akter Nipun, National Award Winner Actress were present as Discussants. Ms. Qantara Khan, Director of Shuchinta Foundation also addressed in the program. Mr. Jabber Hossain, Editor and Publisher of Aj Sarabela conducted the program. Among others, Maj Gen Kazi Fakhruddin Ahmed (Retd), Registrar, Mr. Mohammad Imtiaj, Director of BCPR, Chairmen, faculty members, officers &amp; students of the University were present in the program.
+
+   </div>
+        </div>
+
+
+
+
+
+
+<div class="news">
+                <a href="#news_050219_1" rel="facebox">
+                   <img src="images/news2/news_050219_1.jpg" width="140px" height="100px">
+                    </a><a href="#news_050219_1" rel="facebox">Deputy Director of CPDS Attended an International Conference</a>
+
+                    <span class="date">  Feb 05, 2019  </span>
+                                                  
+                     Mr. Md. Jamal Uddin, Deputy Director, Department of Career &amp; Professional Development Services (CPDS) of Southeast ...
+            </div>                                    
+            <div id="news_050219_1" style="display:none;">
+                <span class="date">  Feb 05, 2019 </span>
+                <img src="images/news2/news_050219_1.jpg" width="600px"> <br>
+                <center>              
+                   Deputy Director of CPDS Attended an International Conference    
+                </center> 
+                   <br>
+                    <div style="text-align: justify;">  
+
+Mr. Md. Jamal Uddin, Deputy Director, Department of Career &amp; Professional Development Services (CPDS) of Southeast University (SEU) attended in "The ASEAN &amp; Indian Higher Education Leaders Conference" from 28 to 29 January 2019 at O.P. Jindal Global University, Sonipat, India as a Panel Discussant.
+ <br><br>
+  <img src="images/news2/news_050219_1_1.jpg" width="600px"> <br><br>
+The Office of the International Affairs &amp; Global Initiatives of O.P. Jindal Global University organized the conference with the theme- ‘Achieving Research Excellence’. Mr. Jamal talked about the prospects and challenges of industry-academia collaboration. 
+ 
+Education leaders from 18 countries including USA, UK, Australia, UAE, Malaysia, Indonesia, Philippine, Thailand, Vietnam, Bhutan, India, and others attended the conference.
+
+   </div>
+        </div>
+
+
+
+
+<div class="news">
+                <a href="#news_040219_2" rel="facebox">
+                   <img src="images/news2/news_040219_2.jpg" width="140px" height="100px">
+                    </a><a href="#news_040219_2" rel="facebox">Institute of Research &amp; Training Organized Research Adda</a>
+
+                    <span class="date">  Feb 04, 2019  </span>
+                                                  
+                     Institute of Research &amp; Training (IRT) in collaboration with Dept. of EEE, SEU organized a research paper ...
+            </div>                                    
+            <div id="news_040219_2" style="display:none;">
+                <span class="date">  Feb 04, 2019 </span>
+                <img src="images/news2/news_040219_2.jpg" width="600px"> <br>
+                <center>              
+                   Institute of Research &amp; Training Organized Research Adda    
+                </center> 
+                   <br>
+                    <div style="text-align: justify;">  
+
+Institute of Research &amp; Training (IRT) in collaboration with Dept. of EEE, SEU organized a research paper presentation session in the name of Research Adda on 31 January  2019 at SEU Permanent Campus, Dhaka.  The program started with the welcome speech by Dr. Syed Abdulla Al Mamun, Director of IRT. Dr. Kamrul Hassan, Assistant Professor, Dept. of EEE presented his PhD research work on “Synthetic and Photophysical Studies on Axially Chiral Ligands Based on Pai-Expanded Aromatic Hydrocarbons and Their Metal Complexes”.
+
+ <br><br>
+  <img src="images/news2/news_040219_2_1.jpg" width="600px"> <br><br>
+
+Prof. Dr. Muhibul Haque Bhuyan, Chairman, Dept. of EEE, Dr. Nur Hossain  Md. Ariful Azim, Associate Professor, Dept. of EEE, Dr. Arun Kanti Guha, Associate Professor, Dept. of Textile Engineering and Dr. AKM Moyeenul Huq, Asst. Professor, Dept. of Pharmacy were present in the program. All the faculties of EEE department along with senior students were also present.
+
+   </div>
+        </div>
+
+
+
+
+<div class="news">
+                <a href="#news_040219_1" rel="facebox">
+                   <img src="images/news2/news_040219_1.JPG" width="140px" height="100px">
+                    </a><a href="#news_040219_1" rel="facebox">SEU Debate Club Participated in UCB Public Parliament-Language Day Special Debate</a>
+
+                    <span class="date">  Feb 04, 2019  </span>
+                                                  
+                     Southeast University Debate Club (SEUDC) participated in the "UCB Public Parliament-Language Day Special ...
+            </div>                                    
+            <div id="news_040219_1" style="display:none;">
+                <span class="date">  Feb 04, 2019 </span>
+                <img src="images/news2/news_040219_1.JPG" width="600px"> <br>
+                <center>              
+                   SEU Debate Club Participated in UCB Public Parliament-Language Day Special Debate    
+                </center> 
+                   <br>
+                    <div style="text-align: justify;">  
+
+Southeast University Debate Club (SEUDC) participated in the "UCB Public Parliament-Language Day Special Debate" on 31 January 2019 jointly organized by SEUDC, Debate for Democracy and ATN Bangla at ATN Bangla Studio in BFDC, Dhaka. Their opponent was Ahsanullah University of Science &amp; Technology. 
+ <br><br>
+  <img src="images/news2/news_040219_1_1.JPG" width="600px"> <br><br>
+The debate is drawn on 2-2 ballots. Ms. Madiha Khan, Moderator of SEU Debate Club and Chairman of Economics Department and Mr. Kazi Parvez Jibon, Assistant Moderator and Lecturer, Department of Law and Justice, along with Ms. Yasmin Begum, Assistant Professor of Pharmacy Department, Southeast University and Ms. Sirajum Monira, Senior Lecturer were  present in the program. Mr. Saiful Alam, President of National Press Club was the Chief Guest. Mr. Ashraful Alam Munna, Mr. Zahidul Haque, Ms. Mahmuda Sarwar Shraboni, Ms. Moriom Chowdhury and Mr. Tawshif Tashauf  Mughdo from SEU participated in the debate competition. 
+   </div>
+        </div>
+
+
+
+
+<div class="news">
+                <a href="#news_310119_1" rel="facebox">
+                   <img src="images/news2/news_310119_1.JPG" width="140px" height="100px">
+                    </a><a href="#news_310119_1" rel="facebox">Southeast Business School Organized Orientation for MBA Program</a>
+
+                    <span class="date">  Jan 31, 2019  </span>
+                                                  
+                      Orientation Program for the newly admitted students of MBA program of Spring Semester 2019 under the Southeast Business ...
+            </div>                                    
+            <div id="news_310119_1" style="display:none;">
+                <span class="date">  Jan 31, 2019 </span>
+                <img src="images/news2/news_310119_1.JPG" width="600px"> <br>
+                <center>              
+                   Southeast Business School Organized Orientation for MBA Program    
+                </center> 
+                   <br>
+                    <div style="text-align: justify;">  
+
+Orientation Program for the newly admitted students of MBA program of Spring Semester 2019 under the Southeast Business School (SBS) held on 30 January 2019 at the SEU Seminar Hall, Main Building, Banani, Dhaka. Prof. Dr. ANM Meshquat Uddin, Vice Chancellor of SEU chaired the program while Mr. Md. Ali Noor, Managing Director of Jibon Bima Corporation attended the program as Chief Guest. 
+
+
+ <br><br>
+  <img src="images/news2/news_310119_1_1.jpg" width="600px"> <br><br>
+
+Maj Gen Kazi Fakhruddin Ahmed (Retd), Registrar of SEU welcomed newly enrolled students. He discussed about rules, regulations and facilities of the University. 
+
+  <br><br>
+  <img src="images/news2/news_310119_1_2.JPG" width="600px"> <br><br>
+
+Prof. Dr. Md. Abu Taher, Pro Vice Chancellor and Mr. A.S. Nooruddin Ahmed, Director of MBA Program also addressed the students. Among others, faculty members, officials and newly enrolled students were present in the program. 
+   </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+      
+
+     
+    
+        <p><a href="news_and_events.php"> View All News </a></p>
+    </div><!-- end col1 -->
+
+    <div class="col2"> 
+
+
+         <div class="notice">
+           
+            <div class="notice-box">                
+                <table>                   
+                    <tbody><tr>                       
+                        <td>                                                        
+                            <img src="images/bangla_slogan.jpg">
+                        </td>
+                    </tr>
+
+                </tbody></table>                               
+            </div>                         
+        </div>  
+      
+
+   
+           
+                 
+<li class="leaf">
+<script language="javascript">
+
+        setInterval(blinktext, 500);
+
+        var txt = "";
+
+        var count = 0;
+
+        function blinktext() {
+
+            var cntrl = document.getElementById("txtblinkingtext");
+
+            if (count == 0)
+
+                txt = cntrl.value;
+
+            if (count % 2 == 0)
+
+                cntrl.value = "";
+
+            else
+
+                cntrl.value = txt;
+
+            count++;
+        }
+
+    </script>
+    
+ <div style="margin: auto; text-align: center;">
+ <input type="text" id="txtblinkingtext" name="txtblinkingtext" value="সাহিত্য উৎসব ২০১৯" readonly="" style="height: 20px; width: 180px; background-color: Red; color: White; font-size:16px; border: 0px none; text-align: center;">
+  <br>  
+ <a href="http://www.seubd.com/page/sahitto_utsab_link.php"><h5>রেজিস্ট্রেশন এর জন্য এখানে ক্লিক করুন ! </h5></a>
+ <br>
+ <br>
+ </div>
+</li>
+            
+                                   
+ 
+
+
+        <div class="notice">  
+            <div class="notice-box">                
+               
+                <a href="#shahittorGift_030817_1" rel="facebox"><img src="images/AboutSEU.jpg" width="333px" style="margin-left: -6px;"></a> 
+                <div id="shahittorGift_030817_1" style="display:none">
+                    
+                    <center>  
+                       <!--  <img src="images/AboutSEU.jpg" width="600px" /> -->
+                        <img src="images/AboutSEU.jpg" width="600px">
+                    </center> 
+
+                </div>
+                                                    
+
+            </div>
+
+                                   
+        </div>  
+
+
+        <div class="notice">
+            <h3> &nbsp;Notice Board </h3>
+            <div class="notice-box">
+                <table>
+
+
+
+
+
+
+
+                        <tbody><tr>
+                        <td>
+                            <span class="cdate">
+                                <span class="month">
+                                      Feb
+                                </span>
+                                <span class="day">
+                                      07
+                                </span>
+                            </span>                            
+                        </td>
+                        <td valign="top" align="left">
+                            <a href="notice_board.php">Notice: Revised schedule for Registration of Newly admitted students in Spring 2019 semester</a>
+                        </td>
+
+
+
+
+                        </tr><tr>
+                        <td>
+                            <span class="cdate">
+                                <span class="month">
+                                      Feb
+                                </span>
+                                <span class="day">
+                                      06
+                                </span>
+                            </span>                            
+                        </td>
+                        <td valign="top" align="left">
+                            <a href="notice_board.php">Notice: SEU will remain closed on 10.02.2019 (Sunday)</a>
+                        </td>
+
+
+
+                        </tr><tr>
+                        <td>
+                            <span class="cdate">
+                                <span class="month">
+                                      Feb
+                                </span>
+                                <span class="day">
+                                      06
+                                </span>
+                            </span>                            
+                        </td>
+                        <td valign="top" align="left">
+                            <a href="notice_board.php">Notice: REVISED Registration, Payment of Tuition Fee, Course ADD/DROP, Semester withdrawal</a>
+                        </td>
+
+
+
+
+                        </tr><tr>
+                        <td>
+                            <span class="cdate">
+                                <span class="month">
+                                      Feb
+                                </span>
+                                <span class="day">
+                                      03
+                                </span>
+                            </span>                            
+                        </td>
+                        <td valign="top" align="left">
+                            <a href="notice_board.php">Notice: REVISED Registration, Payment of Tuition Fee</a>
+                        </td>
+
+
+
+
+
+
+                    </tr><tr>
+                        <td>
+                            <span class="cdate">
+                                <span class="month">
+                                      Jan
+                                </span>
+                                <span class="day">
+                                      27
+                                </span>
+                            </span>                            
+                        </td>
+                        <td valign="top" align="left">
+                            <a href="notice_board.php">Notice: REVISED Registration, Payment of Tuition Fee, Course ADD/DROP, Semester withdrawal</a>
+                        </td>
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+                    <tr>
+                        <td>
+                            <span class="cdate">
+                                <span class="month">
+                                      Nov
+                                </span>
+                                <span class="day">
+                                      15
+                                </span>
+                            </span>                            
+                        </td>
+                        <td valign="top" align="left">
+                            <a href="notice_board.php">Notice: Final Exam Schedule: Fall Semester 2018</a>
+                        </td> -->
+
+
+
+         
+
+<!-- 
+
+                    <tr>
+                        <td>
+                            <span class="cdate">
+                                <span class="month">
+                                      Oct
+                                </span>
+                                <span class="day">
+                                      28
+                                </span>
+                            </span>                            
+                        </td>
+                        <td valign="top" align="left">
+                            <a href="notice_board.php">Notice: Attendance: Closing Workshop of IQAC Project, Southeast University</a>
+                        </td>
+
+
+                    <tr>
+                        <td>
+                            <span class="cdate">
+                                <span class="month">
+                                      Oct
+                                </span>
+                                <span class="day">
+                                      15
+                                </span>
+                            </span>                            
+                        </td>
+                        <td valign="top" align="left">
+                            <a href="notice_board.php">NOTICE: SEU will remain closed on 18 October 2018</a>
+                        </td> -->
+
+
+
+                                                        
+                    </tr><tr>
+                        <td colspan="2"><a href="notice_board.php"> View All Notice </a></td>
+                    </tr>
+                 </tbody></table>             
+            </div><!-- end notice-box -->
+        </div><!-- end Notice -->
+
+
+       
+        <!-- <div class="notice">
+            <h3>&nbsp;6th Convocation, Update </h3>    
+            
+            <div class="notice-box">                
+               <center><img src="images/6thConvLogo.jpg"> </center>
+            </div>
+
+            <hr style="border:1px solid #FAF0E6">    
+
+            <div class="notice-box">
+                <table>
+                    <tr>                       
+                        <td>                                                        
+                            <img src="images/bullet-4.jpg">
+                        </td>
+                        <td>                                                        
+                            <a href="6conv.php"> Attention: All registered students of 6th Convocation</a>
+                        </td>
+                    </tr>
+
+                    <tr>                       
+                        <td>                                                        
+                            <img src="images/bullet-4.jpg">
+                        </td>
+                        <td>                                                        
+                            <a href="6conv.php"> Notice: To all registered students of 6th Convocation (Rehearsal, Gown & Certificate Delivery)...</a>
+                        </td>
+                    </tr>
+
+                    <tr>                       
+                        <td>                                                        
+                            <img src="images/bullet-4.jpg">
+                        </td>
+                        <td>                                                        
+                            <a href="6conv.php"> Attention: All registered students of 6th Convocation... </a>
+                        </td>
+                    </tr>
+                    
+                    <tr>                        
+                        <td colspan="2"><a href="6conv.php"> View All Update </a></td>
+                    </tr>
+                </table>                
+                      
+            </div>                         
+        </div>  --> 
+
+        <!--
+         <div class="notice">
+            <h3>&nbsp;Upcoming Events</h3>            
+            <div class="notice-box">                
+                <table> 
+
+                    <tr>
+                        <td>
+                            <span class="cdateorg">
+                                <span class="monthorg">
+                                       Sep
+                                </span>
+                                <span class="dayorg">
+                                       11
+                                </span>
+                            </span>   
+                        </td>
+                        <td>
+                            <a href="upcoming_events.php"> Freshers' Reception & Cultural Program Summer 2017 (Pharmacy) </a>
+                        </td>
+                    </tr>
+
+
+                    <tr>                        
+                            <td colspan="2"><a href="upcoming_events.php"> View All</a></td>
+                    </tr>
+                </table>                               
+            </div>                         
+        </div>    
+
+        -->
+
+        
+
+
+      
+      
+
+        
+       
+    </div><!-- end col2 -->
+</div><!-- end row2 -->
+</div><!-- end content -->
+
+
+<div class="collaboration_div">
+    <p> International Collaboration</p>
+    <!-- <center>
+        <div class="collaboration_half" style="width:40%;margin-left: 7%;">
+            <a href="http://www.wtu.edu.cn/en/" target="_blank">
+                <center><img src="images/WuhanTextUniLogo.png"> </center> 
+                <div class="Collaboration_bottom">  Wuhan Textile University, China  </div>
+            </a> 
+        </div>
+        <div class="collaboration_half" style="width:40%;margin-left: 7%;">
+            <a href="http://www.shinshu-u.ac.jp/english/" target="_blank">
+                <center><img src="images/ShinshuUniLogo.png"> </center> 
+                <div class="Collaboration_bottom">  Shinshu University, Japan  </div>   
+            </a>
+        </div>
+    </center> -->
+    
+    <div class="collaboration_half">
+        <a href="http://www.wtu.edu.cn/en/" target="_blank">
+            <center><img src="images/WuhanTextUniLogo.png"> </center> 
+            <div class="Collaboration_bottom">  Wuhan Textile University, China  </div>
+        </a> 
+    </div>
+
+    <div class="collaboration_half">
+        <a href="http://www.shinshu-u.ac.jp/english/" target="_blank">
+            <center><img src="images/ShinshuUniLogo.png"> </center> 
+            <div class="Collaboration_bottom">  Shinshu University, Japan  </div>   
+        </a>
+    </div>
+
+
+    <div class="collaboration_half">
+        <a href="http://www.manchester.ac.uk/" target="_blank">
+            <center><img src="images/manchester.png"> </center> 
+            <div class="Collaboration_bottom">  The University of Manchester, UK</div>   
+        </a>
+    </div>
+
+
+    <div class="collaboration_half">
+        <a href="http://english.kmust.edu.cn/" target="_blank">
+            <center><img src="images/Kunming Logo.jpg"> </center> 
+            <div class="Collaboration_bottom">Kunming University of Science and Technology, China</div>   
+        </a>
+    </div>
+
+    <div class="collaboration_half">
+        <a href="http://m.ynni.edu.cn/web/en/home" target="_blank">
+            <center><img src="images/YunnanMinzuUniversity.png"> </center> 
+            <div class="Collaboration_bottom">  Yunnan Minzu University, China</div>   
+        </a>
+    </div>
+
+
+    <div class="collaboration_half">
+        <a href="http://en.ynufe.edu.cn/" target="_blank">
+            <center><img src="images/ynufe.png"> </center> 
+            <div class="Collaboration_bottom">Yunnan University of Finance and Economics, China</div>   
+        </a>
+    </div>
+
+    
+
+
+</div>
+<!-- <div class="footer"> 
+    <div id="accordion">
+        <h3>Section 1</h3>
+        <div>
+            <p>
+                Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+            </p>
+        </div>
+        <h3>Section 2</h3>
+        <div>
+            <p>
+                Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                suscipit faucibus urna.
+            </p>
+        </div>
+
+    </div>
+</div> -->
+
+
+
+
+
+
+                    </div><!-- end main-inner -->
+                </div>
+
+                
+
+<div class="footer">
+    <div class="footer-inner">
+      
+            <ul class="footer-nav">
+                <li><a href="footer_content.php?id=disclaimer"> Disclaimer </a> </li>
+                <!-- <li><a href="footer_content.php?id=it_division"> IT Division </a> </li> -->
+                <li><a href="footer_content.php?id=contact"> Contact </a> </li> 
+            </ul> 
+            
+        <p>Copyright © 2017 Southeast University All rights reserved.</p>
+    </div><!-- end footer-inner -->
+</div> <!-- end footer -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-111371252-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111371252-1');
+</script>
+            </div><!-- end main container_bottom -->
+
+        </div><!-- end wrapper -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-111371252-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111371252-1');
+</script>
+
+    
+    <div id="facebox" style="display:none;">       <div class="popup">         <div class="content">         </div>         <a href="#" class="close"><img src="http://www.seu.edu.bd/images/closelabel.png" title="close" class="close_image"></a>       </div>     </div></body></html></plaintext></body></html>
+    
+    
+    <script type="text/javascript">
+    
+    /**
+    * Coin Slider - Unique jQuery Image Slider
+    * @version: 1.0 - (2010/04/04)
+    * @requires jQuery v1.2.2 or later 
+    * @author Ivan Lazarevic
+    * Examples and documentation at: http://workshop.rs/projects/coin-slider/
+    
+    * Licensed under MIT licence:
+    *   http://www.opensource.org/licenses/mit-license.php
+    **/
+    
+    (function($) {
+    
+    var params 		= new Array;
+    var order		= new Array;
+    var images		= new Array;
+    var links		= new Array;
+    var linksTarget = new Array;
+    var titles		= new Array;
+    var interval	= new Array;
+    var imagePos	= new Array;
+    var appInterval = new Array;	
+    var squarePos	= new Array;	
+    var reverse		= new Array;
+    
+    $.fn.coinslider= $.fn.CoinSlider = function(options){
+    
+    init = function(el){
+    
+    order[el.id] 		= new Array();	// order of square appereance
+    images[el.id]		= new Array();
+    links[el.id]		= new Array();
+    linksTarget[el.id]	= new Array();
+    titles[el.id]		= new Array();
+    imagePos[el.id]		= 0;
+    squarePos[el.id]	= 0;
+    reverse[el.id]		= 1;						
+    
+    params[el.id] = $.extend({}, $.fn.coinslider.defaults, options);
+    
+    // create images, links and titles arrays
+    $.each($('#'+el.id+' img'), function(i,item){
+    images[el.id][i] 		= $(item).attr('src');
+    links[el.id][i] 		= $(item).parent().is('a') ? $(item).parent().attr('href') : '';
+    linksTarget[el.id][i] 	= $(item).parent().is('a') ? $(item).parent().attr('target') : '';
+    titles[el.id][i] 		= $(item).next().is('span') ? $(item).next().html() : '';
+    $(item).hide();
+    $(item).next().hide();
+    });			
+    
+    
+    // set panel
+    $(el).css({
+    'background-image':'url('+images[el.id][0]+')',
+    'width': params[el.id].width,
+    'height': params[el.id].height,
+    'position': 'relative',
+    'background-position': 'top left'
+    }).wrap("<div class='coin-slider' id='coin-slider-"+el.id+"' />");	
+    
+    
+    // create title bar
+    $('#'+el.id).append("<div class='cs-title' id='cs-title-"+el.id+"' style='position: absolute; right: 0; z-index: 1000;'></div>");
+    
+    $.setFields(el);
+    
+    if(params[el.id].navigation)
+    $.setNavigation(el);
+    
+    $.transition(el,0);
+    $.transitionCall(el);
+    
+    }
+    
+    // squares positions
+    $.setFields = function(el){
+    
+    tWidth = sWidth = parseInt(params[el.id].width/params[el.id].spw);
+    tHeight = sHeight = parseInt(params[el.id].height/params[el.id].sph);
+    
+    counter = sLeft = sTop = 0;
+    tgapx = gapx = params[el.id].width - params[el.id].spw*sWidth;
+    tgapy = gapy = params[el.id].height - params[el.id].sph*sHeight;
+    
+    for(i=1;i <= params[el.id].sph;i++){
+    gapx = tgapx;
+    
+    if(gapy > 0){
+    gapy--;
+    sHeight = tHeight+1;
+    } else {
+    sHeight = tHeight;
+    }
+    
+    for(j=1; j <= params[el.id].spw; j++){	
+    
+    if(gapx > 0){
+    gapx--;
+    sWidth = tWidth+1;
+    } else {
+    sWidth = tWidth;
+    }
+    
+    order[el.id][counter] = i+''+j;
+    counter++;
+    
+    if(params[el.id].links)
+    $('#'+el.id).append("<a href='"+links[el.id][0]+"' class='cs-"+el.id+"' id='cs-"+el.id+i+j+"' style='width:"+sWidth+"px; height:"+sHeight+"px; float: left; position: absolute;'></a>");
+    else
+    $('#'+el.id).append("<div class='cs-"+el.id+"' id='cs-"+el.id+i+j+"' style='width:"+sWidth+"px; height:"+sHeight+"px; float: left; position: absolute;'></div>");
+    
+    // positioning squares
+    $("#cs-"+el.id+i+j).css({ 
+    'background-position': -sLeft +'px '+(-sTop+'px'),
+    'left' : sLeft ,
+    'top': sTop
+    });
+    
+    sLeft += sWidth;
+    }
+    
+    sTop += sHeight;
+    sLeft = 0;					
+    
+    }
+    
+    
+    $('.cs-'+el.id).mouseover(function(){
+    $('#cs-navigation-'+el.id).show();
+    });
+    
+    $('.cs-'+el.id).mouseout(function(){
+    $('#cs-navigation-'+el.id).hide();
+    });	
+    
+    $('#cs-title-'+el.id).mouseover(function(){
+    $('#cs-navigation-'+el.id).show();
+    });
+    
+    $('#cs-title-'+el.id).mouseout(function(){
+    $('#cs-navigation-'+el.id).hide();
+    });	
+    
+    if(params[el.id].hoverPause){	
+    $('.cs-'+el.id).mouseover(function(){
+    params[el.id].pause = true;
+    });
+    
+    $('.cs-'+el.id).mouseout(function(){
+    params[el.id].pause = false;
+    });	
+    
+    $('#cs-title-'+el.id).mouseover(function(){
+    params[el.id].pause = true;
+    });
+    
+    $('#cs-title-'+el.id).mouseout(function(){
+    params[el.id].pause = false;
+    });	
+    }
+    
+    
+    };
+    
+    
+    $.transitionCall = function(el){
+    
+    clearInterval(interval[el.id]);	
+    delay = params[el.id].delay + params[el.id].spw*params[el.id].sph*params[el.id].sDelay;
+    interval[el.id] = setInterval(function() { $.transition(el)  }, delay);
+    
+    }
+    
+    // transitions
+    $.transition = function(el,direction){
+    
+    if(params[el.id].pause == true) return;
+    
+    $.effect(el);
+    
+    squarePos[el.id] = 0;
+    appInterval[el.id] = setInterval(function() { $.appereance(el,order[el.id][squarePos[el.id]])  },params[el.id].sDelay);
+    
+    $(el).css({ 'background-image': 'url('+images[el.id][imagePos[el.id]]+')' });
+    
+    if(typeof(direction) == "undefined")
+    imagePos[el.id]++;
+    else
+    if(direction == 'prev')
+    imagePos[el.id]--;
+    else
+    imagePos[el.id] = direction;
+    
+    if  (imagePos[el.id] == images[el.id].length) {
+    imagePos[el.id] = 0;
+    }
+    
+    if (imagePos[el.id] == -1){
+    imagePos[el.id] = images[el.id].length-1;
+    }
+    
+    $('.cs-button-'+el.id).removeClass('cs-active');
+    $('#cs-button-'+el.id+"-"+(imagePos[el.id]+1)).addClass('cs-active');
+    
+    if(titles[el.id][imagePos[el.id]]){
+    $('#cs-title-'+el.id).css({ 'opacity' : 0 }).animate({ 'opacity' : params[el.id].opacity }, params[el.id].titleSpeed);
+    $('#cs-title-'+el.id).html(titles[el.id][imagePos[el.id]]);
+    } else {
+    $('#cs-title-'+el.id).css('opacity',0);
+    }				
+    
+    };
+    
+    $.appereance = function(el,sid){
+    
+    $('.cs-'+el.id).attr('href',links[el.id][imagePos[el.id]]).attr('target',linksTarget[el.id][imagePos[el.id]]);
+    
+    if (squarePos[el.id] == params[el.id].spw*params[el.id].sph) {
+    clearInterval(appInterval[el.id]);
+    return;
+    }
+    
+    $('#cs-'+el.id+sid).css({ opacity: 0, 'background-image': 'url('+images[el.id][imagePos[el.id]]+')' });
+    $('#cs-'+el.id+sid).animate({ opacity: 1 }, 300);
+    squarePos[el.id]++;
+    
+    };
+    
+    // navigation
+    $.setNavigation = function(el){
+    // create prev and next 
+    $(el).append("<div id='cs-navigation-"+el.id+"'></div>");
+    $('#cs-navigation-'+el.id).hide();
+    
+    $('#cs-navigation-'+el.id).append("<a href='#' id='cs-prev-"+el.id+"' class='cs-prev'> </a>"); // add prev
+    $('#cs-navigation-'+el.id).append("<a href='#' id='cs-next-"+el.id+"' class='cs-next'> </a>"); // add next
+    $('#cs-prev-'+el.id).css({
+    'position' 	: 'absolute',
+    //'top'		: params[el.id].height/2 - 15,
+    //'left'		: 0,
+    'top'		: params[el.id].height - 30,
+    'right'		:0,
+    'z-index' 	: 1001,
+    'line-height': '30px',
+    'opacity'	: params[el.id].opacity
+    }).click( function(e){
+    e.preventDefault();
+    $.transition(el,'prev');
+    $.transitionCall(el);		
+    }).mouseover( function(){ $('#cs-navigation-'+el.id).show() });
+    
+    $('#cs-next-'+el.id).css({
+    'position' 	: 'absolute',
+    'top'		: params[el.id].height - 30,
+    //'right'		: 0,
+    'right'		: 0,
+    'z-index' 	: 1001,
+    'line-height': '30px',
+    'opacity'	: params[el.id].opacity
+    }).click( function(e){
+    e.preventDefault();
+    $.transition(el);
+    $.transitionCall(el);
+    }).mouseover( function(){ $('#cs-navigation-'+el.id).show() });
+    
+    // image buttons
+    $("<div id='cs-buttons-"+el.id+"' class='cs-buttons'></div>").appendTo($('#coin-slider-'+el.id));
+    
+    
+    for(k=1;k<images[el.id].length+1;k++){
+    $('#cs-buttons-'+el.id).append("<a href='#' class='cs-button-"+el.id+"' id='cs-button-"+el.id+"-"+k+"'>"+k+"</a>");
+    }
+    
+    $.each($('.cs-button-'+el.id), function(i,item){
+    $(item).click( function(e){
+    $('.cs-button-'+el.id).removeClass('cs-active');
+    $(this).addClass('cs-active');
+    e.preventDefault();
+    $.transition(el,i);
+    $.transitionCall(el);				
+    })
+    });	
+    
+    $('#cs-navigation-'+el.id+' a').mouseout(function(){
+    $('#cs-navigation-'+el.id).hide();
+    params[el.id].pause = false;
+    });						
+    
+    $("#cs-buttons-"+el.id).css({
+    //'left'			: '50%',
+    'right'			: '5%',
+    //'margin-left' 	: -images[el.id].length*15/2-5,
+    'margin-right' 	: -images[el.id].length*15/2-5,
+    'margin-top' 	: -images[el.id].length*15/2-5, //this line is added
+    'position'		: 'relative'
+    
+    });
+    
+    
+    }
+    
+    
+    
+    
+    // effects
+    $.effect = function(el){
+    
+    effA = ['random','swirl','rain','straight'];
+    if(params[el.id].effect == '')
+    eff = effA[Math.floor(Math.random()*(effA.length))];
+    else
+    eff = params[el.id].effect;
+    
+    order[el.id] = new Array();
+    
+    if(eff == 'random'){
+    counter = 0;
+    for(i=1;i <= params[el.id].sph;i++){
+    for(j=1; j <= params[el.id].spw; j++){	
+    order[el.id][counter] = i+''+j;
+    counter++;
+    }
+    }	
+    $.random(order[el.id]);
+    }
+    
+    if(eff == 'rain')	{
+    $.rain(el);
+    }
+    
+    if(eff == 'swirl')
+    $.swirl(el);
+    
+    if(eff == 'straight')
+    $.straight(el);
+    
+    reverse[el.id] *= -1;
+    if(reverse[el.id] > 0){
+    order[el.id].reverse();
+    }
+    
+    }
+    
+    
+    // shuffle array function
+    $.random = function(arr) {
+    
+    var i = arr.length;
+    if ( i == 0 ) return false;
+    while ( --i ) {
+    var j = Math.floor( Math.random() * ( i + 1 ) );
+    var tempi = arr[i];
+    var tempj = arr[j];
+    arr[i] = tempj;
+    arr[j] = tempi;
+    }
+    }	
+    
+    //swirl effect by milos popovic
+    $.swirl = function(el){
+    
+    var n = params[el.id].sph;
+    var m = params[el.id].spw;
+    
+    var x = 1;
+    var y = 1;
+    var going = 0;
+    var num = 0;
+    var c = 0;
+    
+    var dowhile = true;
+    
+    while(dowhile) {
+    
+    num = (going==0 || going==2) ? m : n;
+    
+    for (i=1;i<=num;i++){
+    
+    order[el.id][c] = x+''+y;
+    c++;
+    
+    if(i!=num){
+    switch(going){
+    case 0 : y++; break;
+    case 1 : x++; break;
+    case 2 : y--; break;
+    case 3 : x--; break;
+    
+    }
+    }
+    }
+    
+    going = (going+1)%4;
+    
+    switch(going){
+    case 0 : m--; y++; break;
+    case 1 : n--; x++; break;
+    case 2 : m--; y--; break;
+    case 3 : n--; x--; break;		
+    }
+    
+    check = $.max(n,m) - $.min(n,m);			
+    if(m<=check && n<=check)
+    dowhile = false;
+    
+    }
+    }
+    
+    // rain effect
+    $.rain = function(el){
+    var n = params[el.id].sph;
+    var m = params[el.id].spw;
+    
+    var c = 0;
+    var to = to2 = from = 1;
+    var dowhile = true;
+    
+    
+    while(dowhile){
+    
+    for(i=from;i<=to;i++){
+    order[el.id][c] = i+''+parseInt(to2-i+1);
+    c++;
+    }
+    
+    to2++;
+    
+    if(to < n && to2 < m && n<m){
+    to++;	
+    }
+    
+    if(to < n && n>=m){
+    to++;	
+    }
+    
+    if(to2 > m){
+    from++;
+    }
+    
+    if(from > to) dowhile= false;
+    
+    }			
+    
+    }
+    
+    // straight effect
+    $.straight = function(el){
+    counter = 0;
+    for(i=1;i <= params[el.id].sph;i++){
+    for(j=1; j <= params[el.id].spw; j++){	
+    order[el.id][counter] = i+''+j;
+    counter++;
+    }
+    
+    }
+    }
+    
+    $.min = function(n,m){
+    if (n>m) return m;
+    else return n;
+    }
+    
+    $.max = function(n,m){
+    if (n<m) return m;
+    else return n;
+    }		
+    
+    this.each (
+    function(){ init(this); }
+    );
+    
+    
+    };
+    
+    
+    // default values
+    $.fn.coinslider.defaults = {	
+    width: 940, // width of slider panel
+    height: 300, // height of slider panel
+    spw: 7, // squares per width
+    sph: 5, // squares per height
+    delay: 3000, // delay between images in ms
+    sDelay: 30, // delay beetwen squares in ms
+    opacity: 0.7, // opacity of title and navigation
+    titleSpeed: 500, // speed of title appereance in ms
+    effect: '', // random, swirl, rain, straight
+    navigation: true, // prev next and buttons
+    links : true, // show images as links 
+    hoverPause: true // pause on hover		
+    };	
+    
+    })(jQuery);
+    
+    
+    </script>
